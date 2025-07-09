@@ -22,7 +22,3 @@ async def remove_background(file: UploadFile = File(...)):
         "filename": file.filename,
         "image": output_data.hex()
     }
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 4000))
-    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=False)
